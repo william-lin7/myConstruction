@@ -11,7 +11,7 @@ int main(){
   printf("\nMENU ITEM #\tITEM\tPrice\n");
   printf("------------------------------\n\n");
   printf("ITEM 1:\t%s   %d\n\n", p0 -> s, p0 -> n);
-  struct food f1 = sample("apples", 1);
+  struct food f1 = sample();
   struct food *p1 = &f1;
   printf("ITEM 2:\t%s   %d\n\n", p1 -> s, p1 -> n);
   printf("ITEM 1 CONTENTS\n");

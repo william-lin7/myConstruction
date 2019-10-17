@@ -1,15 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 struct food{
   char *s;
   int n;
 };
 
-struct food sample (char *s, int n){
+void srand(unsigned int seed);
+
+char* menu[] = {"french fries", "burger", "hashbrowns", "milkshake", "coffee", "soda"};
+int prices[] = {4, 6, 3, 5, 2, 1};
+
+struct food sample (){
   struct food f;
-  f.s = s;
-  f.n = n;
+  srand(time(0));
+  int num = rand() % 6;
+  f.s = menu[num];
+  f.n = prices[num];
   return f;
 }
 
